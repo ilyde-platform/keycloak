@@ -1,0 +1,16 @@
+embed-server --server-config=standalone-ha.xml --std-out=echo
+/subsystem=keycloak-server/spi=eventsListener/:add
+/subsystem=keycloak-server/spi=eventsListener/provider=keycloak-amqp/:add(enabled=true, properties={ \
+    rabbitmq.exchange => "${env.RABBITMQ_EXCHANGE_NAME:default}",\
+    rabbitmq.user => "${env.RABBITMQ_DEFAULT_USER:admin}",\
+    rabbitmq.password => "${env.RABBITMQ_DEFAULT_PASS:Pa55w0rd}",\
+    rabbitmq.host => "${env.RABBITMQ_HOST:rabbitmq}", \
+    rabbitmq.port => "${env.RABBITMQ_PORT:5672}", \
+    rabbitmq.durable => "${env.RABBITMQ_DURABLE:true}", \
+    rabbitmq.timeout => "${env.RABBITMQ_TIMEOUT:10000}", \
+    rabbitmq.fairdispatch => "${env.RABBITMQ_FAIR_DISPATCH:true}", \
+    rabbitmq.prefetch => "${env.RABBITMQ_PREFETCH_COUNT:5}", \
+    module.id => "keycloak:amqp"})
+stop-embedded-server
+
+    
