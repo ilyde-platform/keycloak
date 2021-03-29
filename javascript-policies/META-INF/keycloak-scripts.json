@@ -1,0 +1,25 @@
+{
+
+    "policies": [
+        {
+            "name": "Dataset Access Policy",
+            "fileName": "access-dataset-policy.js",
+            "description": "Only global Dataset can be access and Project's member can access dataset for the given project."
+        },
+        {
+            "name": "Project Access Policy",
+            "fileName": "access-project-policy.js",
+            "description": "Only public projects can be access by all otherwise just Project's members."
+        },
+        {
+            "name": "Job Access Policy",
+            "fileName": "access-job-policy.js",
+            "description": "Project's member can access job for the given project."
+        },
+        {
+            "name": "Model Access Policy",
+            "fileName": "access-model-policy.js",
+            "description": "Project's member can access model for the given project."
+        }
+    ]
+}
