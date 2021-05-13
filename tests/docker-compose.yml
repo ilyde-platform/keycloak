@@ -11,7 +11,7 @@ services:
       POSTGRES_PASSWORD: Pa55w0rd
 
   keycloak:
-    image: ilyde/keycloak:11.0.2
+    image: ilyde/keycloak:11.0.2-rc1
     container_name: keycloak
     environment:
       DB_VENDOR: POSTGRES
