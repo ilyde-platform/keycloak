@@ -282,7 +282,7 @@ body {
   background-image: url("../img/bg-login-4.jpg");
 }
 
-body > div:first-child {
+.login-pf-page {
   z-index: 4;
   display: inline-block;
   position: fixed;
@@ -300,16 +300,15 @@ body > div:first-child {
   padding: 30px;
   -webkit-transition: background-color 100ms;
   transition: background-color 100ms; }
-  
-  body > div:first-child #kc-header .kc-logo-text {
+  .login-pf-page #kc-header .kc-logo-text {
     text-align: center; }
-    body > div:first-child #kc-header .kc-logo-text span {
+    .login-pf-page #kc-header .kc-logo-text span {
       width: 64px;
       height: 36px;
       display: inline-block;
       color: rgba(0, 0, 0, 0);
       position: relative; }
-      body > div:first-child #kc-header .kc-logo-text span::after {
+      .login-pf-page #kc-header .kc-logo-text span::after {
         content: "";
         position: absolute;
         top: 0;
@@ -317,11 +316,11 @@ body > div:first-child {
         right: 0;
         bottom: 0;
         background-image: url("../img/logo-blue.svg"); }
-  body > div:first-child div header {
+  .login-pf-page .card-pf header.login-pf-header {
     margin: 30px -30px;
     border-bottom: 1px solid rgba(128, 149, 168, 0.15);
     padding-bottom: 30px; }
-    body > div:first-child div header h1 {
+    .login-pf-page .card-pf header.login-pf-header h1 {
       text-align: center;
       font-family: "GT-Walsheim", sans-serif;
       font-size: 24px;
@@ -332,22 +331,22 @@ body > div:first-child {
       font-stretch: normal;
       font-weight: 500; }
       @media (min-width: 576px) {
-       body > div:first-child div header h1 {
+        .login-pf-page .card-pf header.login-pf-header h1 {
           font-size: 24px; } }
       @media (min-width: 768px) {
-        body > div:first-child div header h1 {
+        .login-pf-page .card-pf header.login-pf-header h1 {
           font-size: 24px; } }
       @media (min-width: 992px) {
-        body > div:first-child div header h1 {
+        .login-pf-page .card-pf header.login-pf-header h1 {
           font-size: 24px; } }
       @media (min-width: 1200px) {
-        body > div:first-child div header h1 {
+        .login-pf-page .card-pf header.login-pf-header h1 {
           font-size: 24px; } }
-  body > div:first-child div .kc-content section {
+  .login-pf-page .card-pf .kc-content section {
     padding: 30px 30px 0 30px; }
-    body > div:first-child div .kc-content section:last-of-type {
+    .login-pf-page .card-pf .kc-content section:last-of-type {
       padding-bottom: 30px; }
-  body > div:first-child div .kc-content hr {
+  .login-pf-page .card-pf .kc-content hr {
     height: 0;
     border: 0;
     border-bottom: 1px solid rgba(128, 149, 168, 0.15);
@@ -355,7 +354,7 @@ body > div:first-child {
     margin-right: -30px;
     margin-bottom: 30px;
     margin-left: -30px; }
-  body > div:first-child div .kc-content .buttons-wrapper {
+  .login-pf-page .card-pf .kc-content .buttons-wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -365,7 +364,7 @@ body > div:first-child {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between; }
-   body > div:first-child div div.kc-content .buttons-wrapper .button:not(:last-child), body > div:first-child div .kc-content .buttons-wrapper button:not(:last-child), body > div:first-child div .kc-content .buttons-wrapper input:not(:last-child) {
+    .login-pf-page .card-pf .kc-content .buttons-wrapper .button:not(:last-child), .login-pf-page .card-pf .kc-content .buttons-wrapper button:not(:last-child), .login-pf-page .card-pf .kc-content .buttons-wrapper input:not(:last-child) {
       margin-right: 15px; }
 
 #kc-info {
@@ -403,7 +402,7 @@ body > div:first-child {
   padding-left: 0;
   padding-right: 0; }
 
-button, input[type="submit"], input[type="submit"]#kc-login {
+button, input[type="submit"] {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -453,7 +452,7 @@ button, input[type="submit"], input[type="submit"]#kc-login {
     min-width: auto;
     height: auto;
     padding: 5px 10px; }
- button.primary, button.btn-primary, input[type="submit"].primary, input[type="submit"].btn-primary, input[type="submit"]#kc-login {
+  button.primary, button.btn-primary, input[type="submit"].primary, input[type="submit"].btn-primary {
     background-color: #3F37D9;
     color: white; }
     button.primary:hover, button.btn-primary:hover, input[type="submit"].primary:hover, input[type="submit"].btn-primary:hover {
@@ -467,6 +466,7 @@ button, input[type="submit"], input[type="submit"]#kc-login {
       background-color: #eeecf8; }
     button.secondary:active, button.secondary .active, button.btn-secondary:active, button.btn-secondary .active, input[type="submit"].secondary:active, input[type="submit"].secondary .active, input[type="submit"].btn-secondary:active, input[type="submit"].btn-secondary .active {
       background-color: #DAD9E4; }
+
 
 label {
   font-family: "GT-Walsheim", sans-serif;
